@@ -1,0 +1,13 @@
+﻿@model WebApplication1.Models.CustomerTb
+
+<h2>Delete Customer</h2>
+
+<h3>Are you sure you want to delete this customer?</h3>
+<div>
+    <strong>@Model.CustomerName</strong>
+    <p>@Model.Address</p>
+</div>
+
+<!-- Change the form to a link for GET deletion -->
+<a href="@Url.Action("Delete", "Customer", new { id = Model.CustomerId })" class="btn btn-danger">Delete</a>
+<a href="@Url.Action("Index", "Customer")" class="btn btn-secondary">Cancel</a>
